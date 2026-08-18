@@ -1,8 +1,28 @@
+@font-face {
+    font-family: "Cheque";
+    src: url("/fonts/Cheque-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cheque";
+    src: url("/fonts/Cheque-Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Artegra Slab Condensed";
+    src: url("/fonts/artegraslabcondensed-semibold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
 :root {
-    --bg-dark: #07211b;
-    --bg-light: #0b2c24;
-    --gold: #d7bd78;
-    --gold-soft: rgba(215, 189, 120, 0.8);
+    --green: #031b16;
+    --gold: #d3b56f;
+    --gold-soft: #bfa66b;
 }
 
 * {
@@ -11,96 +31,153 @@
 
 html,
 body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
-    min-height: 100%;
+}
+
+html {
+    background-color: var(--green);
 }
 
 body {
     min-height: 100vh;
-    font-family: "Cormorant Garamond", Georgia, serif;
+
+    background-color: var(--green);
     color: var(--gold);
-    background: radial-gradient(circle at center, var(--bg-light) 0%, var(--bg-dark) 70%);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        "Times New Roman",
+        serif;
 }
 
-.page {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-}
+
+/* CAŁY EKRAN */
 
 .hero {
     width: 100%;
-    max-width: 1100px;
-    text-align: center;
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
+
+    justify-content: center;
     align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
 }
 
-.date {
+
+/* DATA */
+
+.wedding-date {
     margin: 0;
-    font-size: clamp(3.2rem, 8vw, 7rem);
-    line-height: 1.1;
-    font-style: italic;
-    font-weight: 400;
+
     color: var(--gold);
-    text-shadow: 0 0 18px rgba(215, 189, 120, 0.08);
+    
+    font-family: "Cheque", serif;
+    font-weight: 400;
+    font-size: clamp(
+        3.2rem,
+        7vw,
+        7rem
+    );
+
+    line-height: 1;
+
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
 }
 
-.countdown-label {
-    margin: 22px 0 12px;
-    font-size: clamp(1rem, 1.8vw, 1.35rem);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gold-soft);
-}
+
+/* ODLICZANIE */
 
 .countdown {
+    margin-top: 32px;
+
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    gap: 18px;
-}
+    align-items: center;
 
-.countdown-item {
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
-    color: var(--gold);
-}
-
-.countdown-number {
-    font-size: clamp(1.6rem, 2.4vw, 2.3rem);
-    font-weight: 500;
-    line-height: 1;
-}
-
-.countdown-unit {
-    font-size: clamp(1rem, 1.6vw, 1.25rem);
     color: var(--gold-soft);
+
+    font-family: "Artegra Slab Condensed", serif;
+    font-weight: 600;
+    font-size: clamp(
+        1.1rem,
+        1.7vw,
+        1.6rem
+    );
+
+    letter-spacing: 0.1em;
 }
 
-@media (max-width: 700px) {
-    .date {
-        font-size: clamp(2.6rem, 12vw, 4.2rem);
+.separator {
+    margin: 0 4px;
+
+    opacity: 0.65;
+}
+
+
+/* WIĘCEJ JUŻ NIEBAWEM */
+
+.coming-soon {
+    margin:
+
+        54px
+        0
+        0;
+
+    color: var(--gold);
+
+    font-family: "Artegra Slab Condensed", serif;
+    font-weight: 600;
+    font-size: clamp(
+        1.3rem,
+        2vw,
+        1.8rem
+    );
+
+    letter-spacing: 0.04em;
+
+    opacity: 0.9;
+}
+
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 24px;
+    }
+
+    .wedding-date {
+        font-size: clamp(
+            2.6rem,
+            11vw,
+            4rem
+        );
+
+        white-space: normal;
     }
 
     .countdown {
-        flex-direction: column;
-        gap: 10px;
+        margin-top: 25px;
+
+        font-size: 1.1rem;
     }
 
-    .countdown-item {
-        justify-content: center;
+    .coming-soon {
+        margin-top: 45px;
+
+        font-size: 1.35rem;
     }
 
-    .countdown-label {
-        margin-top: 18px;
-        margin-bottom: 10px;
-    }
 }

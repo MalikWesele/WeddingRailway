@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Gloria i Wojciech — 09.01.2027 15:30" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Gloria & Wojciech | 09.01.2027</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap"
         rel="stylesheet"
-    />
+    >
 
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
-    <main class="page">
-        <section class="hero">
-            <h1 class="date">09.01.2027 15:30</h1>
 
-            <p class="countdown-label">Do ślubu pozostało</p>
+    <main class="hero">
 
-            <div class="countdown" id="countdown" aria-live="polite">
-                <div class="countdown-item">
-                    <span class="countdown-number" id="days">000</span>
-                    <span class="countdown-unit">dni</span>
-                </div>
+        <h1 class="wedding-date">
+            09.01.2027 15:30
+        </h1>
 
-                <div class="countdown-item">
-                    <span class="countdown-number" id="hours">00</span>
-                    <span class="countdown-unit">godzin</span>
-                </div>
+        <div
+            class="countdown"
+            id="countdown"
+            aria-label="Odliczanie do ślubu"
+        >
+            <span id="days">000</span>
+            <span class="separator">:</span>
+            <span id="hours">00</span>
+            <span class="separator">:</span>
+            <span id="minutes">00</span>
+            <span class="separator">:</span>
+            <span id="seconds">00</span>
+        </div>
 
-                <div class="countdown-item">
-                    <span class="countdown-number" id="minutes">00</span>
-                    <span class="countdown-unit">minut</span>
-                </div>
+        <p class="coming-soon">
+            Więcej już niebawem
+        </p>
 
-                <div class="countdown-item">
-                    <span class="countdown-number" id="seconds">00</span>
-                    <span class="countdown-unit">sekund</span>
-                </div>
-            </div>
-        </section>
     </main>
 
     <script src="/script.js"></script>
+
 </body>
 </html>
