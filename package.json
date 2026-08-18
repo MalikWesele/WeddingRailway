@@ -1,9 +1,8 @@
 {
-  "name": "wedding-website",
+  "name": "wedding-railway",
   "version": "1.0.0",
   "private": true,
-  "description": "Minimal wedding website for Railway",
-  "main": "server.js",
+  "description": "Wedding website - Gloria & Wojciech",
   "scripts": {
     "start": "node server.js"
   },
